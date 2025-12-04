@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>𝐁𝐄𝐍𝐙 𝐗𝐌𝐃  𝐏𝐀𝐈𝐑</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="shortcut icon" href="https://files.catbox.moe/39z8jd.jpg" type="image/x-icon">
+  <style>
+    :root {
+      --navy-primary: #0a1428;
+      --accent-blue: #5ce1e6;
+      --accent-whatsapp: #25D366;
+      --text-primary: #e6f0ff;
+      --text-secondary: #a3b3cc;
+      --transition: all 0.35s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0a1428, #0f1c38, #14264a);
+      background-size: 300% 300%;
+      animation: gradientAnimation 15s ease infinite;
+      color: var(--text-primary);
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Inter', 'Segoe UI', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .container {
+      max-width: 500px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid var(--accent-blue);
+      box-shadow: 0 0 0 4px rgba(92, 225, 230, 0.15);
+      transition: var(--transition);
+      margin-bottom: 25px;
+    }
+
+    .profile-img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 0 4px rgba(92, 225, 230, 0.35);
+    }
+
+    h1 {
+      color: white;
+      font-size: 2.4rem;
+      margin-bottom: 15px;
+      text-align: center;
+      letter-spacing: 1px;
+      font-weight: 700;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(90deg, var(--accent-blue), #88c9f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      color: var(--text-secondary);
+      font-size: 1.1rem;
+      text-align: center;
+      max-width: 400px;
+      margin-bottom: 35px;
+      line-height: 1.6;
+      padding: 0 15px;
+    }
+
+    .btn {
+      width: 280px;
+      padding: 16px 25px;
+      margin: 12px 0;
+      background: transparent;
+      border-radius: 28px;
+      border: 2px solid rgba(92, 225, 230, 0.3);
+      font-size: 18px;
+      font-weight: bold;
+      text-transform: uppercase;
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      letter-spacing: 0.5px;
+    }
+
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      height: 200%;
+      width: 200%;
+      background: rgba(92, 225, 230, 0.1);
+      transform: skewX(45deg);
+      transition: var(--transition);
+    }
+
+    .btn:hover::before {
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: rgba(15, 28, 56, 0.8);
+      border-color: var(--accent-blue);
+      color: var(--accent-blue);
+      box-shadow: 0 8px 20px rgba(92, 225, 230, 0.25);
+      transform: translateY(-3px);
+    }
+
+    .btn:active {
+      transform: translateY(0);
+    }
+
+    .whatsapp-btn {
+      border-color: rgba(37, 211, 102, 0.3) !important;
+    }
+
+    .whatsapp-btn:hover {
+      color: var(--accent-whatsapp) !important;
+      border-color: var(--accent-whatsapp) !important;
+    }
+
+    .whatsapp-btn::before {
+      background: rgba(37, 211, 102, 0.1) !important;
+    }
+
+    .github-btn {
+      border-color: rgba(169, 189, 212, 0.3) !important;
+    }
+
+    .github-btn:hover {
+      color: #c9d1d9 !important;
+      border-color: #c9d1d9 !important;
+    }
+
+    .github-btn::before {
+      background: rgba(169, 189, 212, 0.1) !important;
+    }
+
+    footer {
+      margin-top: 35px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        width: 90%;
+        padding: 14px 20px;
+        font-size: 16px;
+      }
+      h1 {
+        font-size: 2.0rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.ibb.co/Wpc316Yk/jpg.jpg" alt="Benz Technologies Logo" class="profile-img">
+    <h1>𝐁𝐄𝐍𝐙 𝐓𝐄𝐂𝐇𝐍𝐎𝐋𝐎𝐆𝐈𝐄𝐒</h1>
+    <p>𝐒𝐞𝐬𝐬𝐢𝐨𝐧 𝐈𝐝 𝐆𝐞𝐧𝐞𝐫𝐚𝐭𝐨𝐫 𝐟𝐨𝐫 𝐁𝐄𝐍𝐙</p>
+    
+    <button onclick="window.open('/qr', '_self')" class="btn">
+      <i class="fas fa-qrcode"></i> 𝐐𝐑 𝐂𝐎𝐃𝐄
+    </button>
+    
+    <button onclick="window.open('/pair', '_self')" class="btn">
+      <i class="fas fa-link"></i> 𝐏𝐀𝐈𝐑 𝐂𝐎𝐃𝐄
+    </button>
+    
+    <button onclick="window.open('https://github.com/JadenAfrix1/Benz-Session-Pair/fork', '_blank')" class="btn github-btn">
+      <i class="fab fa-github"></i> 𝐆𝐈𝐓𝐇𝐔𝐁
+    </button>
+    
+    <button onclick="window.open('https://whatsapp.com/channel/0029VajbiIfAjPXO45zG2i2c', '_blank')" class="btn whatsapp-btn">
+      <i class="fab fa-whatsapp"></i> 𝐊𝐈𝐍𝐆 𝐀𝐋𝐏𝐇𝐀
+    </button>
+    
+    <button onclick="window.open('https://whatsapp.com/channel/0029Vb6K4nw96H4LOMaOLF22', '_blank')" class="btn whatsapp-btn">
+      <i class="fab fa-whatsapp"></i> 𝐍𝐄𝐗𝐎𝐑𝐀 𝐓𝐄𝐂𝐇
+    </button>
+    
+    <button onclick="window.open('https://t.me/SecUnitDevs', '_blank')" class="btn">
+      <i class="fab fa-telegram"></i> 𝐋𝐄𝐀𝐑𝐍 𝐖𝐄𝐁 𝐃𝐄𝐕
+    </button>
+
+    <footer>
+      <div>𝐁𝐄𝐍𝐙 &copy; <span id="currentYear"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+    
+    // Add subtle animation to buttons
+    document.addEventListener('DOMContentLoaded', function() {
+      const buttons = document.querySelectorAll('.btn');
+      buttons.forEach((button, index) => {
+        setTimeout(() => {
+          button.style.opacity = '0';
+          button.style.transform = 'translateY(20px)';
+          
+          setTimeout(() => {
+            button.style.opacity = '1';
+            button.style.transform = 'translateY(0)';
+            button.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+          }, 100);
+        }, 150 * index);
+      });
+    });
+  </script>
+</body>
+</html>
